@@ -21,6 +21,10 @@ mongoose
     console.log(err.message);
   });
 app.use("/api/user", userRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello world your using netflix clone api");
+});
+
 
 app.listen(PORT, () => {
   console.log(`server is running on port 5000`);
